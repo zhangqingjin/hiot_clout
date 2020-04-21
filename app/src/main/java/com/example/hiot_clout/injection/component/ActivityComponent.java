@@ -19,6 +19,7 @@ package com.example.hiot_clout.injection.component;
 import com.example.hiot_clout.main.MainActivity;
 import com.example.hiot_clout.injection.PerActivity;
 import com.example.hiot_clout.injection.module.ActivityModule;
+import com.example.hiot_clout.test.mvptest.TestMVPActivity;
 
 import dagger.Component;
 
@@ -33,6 +34,7 @@ import dagger.Component;
 public interface ActivityComponent {
 
     void inject(MainActivity mainActivity);
+    void inject(TestMVPActivity testMVPActivity);
 
     @Component.Builder
     interface ActivityComponentBuilder {
