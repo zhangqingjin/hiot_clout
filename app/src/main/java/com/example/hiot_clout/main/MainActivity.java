@@ -1,8 +1,10 @@
-package com.example.hiot_clout;
+package com.example.hiot_clout.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.hiot_clout.R;
 
 public class MainActivity extends AppCompatActivity {
 
