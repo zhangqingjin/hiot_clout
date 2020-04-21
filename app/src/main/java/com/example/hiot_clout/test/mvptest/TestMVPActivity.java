@@ -12,15 +12,21 @@ import android.widget.Toast;
 import com.example.hiot_clout.R;
 import com.example.hiot_clout.base.BaseActivity;
 import com.example.hiot_clout.base.BasePresenter;
+import com.example.hiot_clout.test.mvptest.dagger2test.DaggerPresenterComponent;
+import com.example.hiot_clout.test.mvptest.dagger2test.PresenterComponent;
 import com.example.hiot_clout.test.mvptest.model.User;
+
+import javax.inject.Inject;
 
 public class TestMVPActivity extends BaseActivity<TestView , TestPresenter> implements TestView{
 
-    private TestPresenter presenter;
+    @Inject
+    TestPresenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        presenter = new TestPresenter();
+        getComponent().inject(this);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_test_mvp);
@@ -47,5 +53,13 @@ public class TestMVPActivity extends BaseActivity<TestView , TestPresenter> impl
     @Override
     public void showMessage(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * 创建注入器
+     * @return
+     */
+    public PresenterComponent getComponent(){
+        return DaggerPresenterComponent.builder().build();
     }
 }

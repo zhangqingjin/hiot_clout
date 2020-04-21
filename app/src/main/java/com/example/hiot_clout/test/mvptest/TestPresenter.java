@@ -3,8 +3,11 @@ package com.example.hiot_clout.test.mvptest;
 import com.example.hiot_clout.base.BasePresenter;
 import com.example.hiot_clout.test.mvptest.model.User;
 
+import javax.inject.Inject;
+
 public class TestPresenter extends BasePresenter<TestView> {
 
+    @Inject
     public TestPresenter(){
     }
 
