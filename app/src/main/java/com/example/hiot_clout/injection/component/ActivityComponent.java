@@ -16,7 +16,7 @@
 package com.example.hiot_clout.injection.component;
 
 
-import com.example.hiot_clout.main.MainActivity;
+import com.example.hiot_clout.ui.main.MainActivity;
 import com.example.hiot_clout.injection.PerActivity;
 import com.example.hiot_clout.injection.module.ActivityModule;
 import com.example.hiot_clout.test.mvptest.TestMVPActivity;

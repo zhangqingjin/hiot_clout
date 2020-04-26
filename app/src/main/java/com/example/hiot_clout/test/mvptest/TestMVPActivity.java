@@ -1,19 +1,13 @@
 package com.example.hiot_clout.test.mvptest;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.hiot_clout.R;
-import com.example.hiot_clout.base.BaseActivity;
-import com.example.hiot_clout.base.BasePresenter;
-import com.example.hiot_clout.test.mvptest.dagger2test.DaggerPresenterComponent;
-import com.example.hiot_clout.test.mvptest.dagger2test.PresenterComponent;
+import com.example.hiot_clout.ui.base.BaseActivity;
 import com.example.hiot_clout.test.mvptest.model.User;
 
 import javax.inject.Inject;
@@ -26,7 +20,7 @@ public class TestMVPActivity extends BaseActivity<TestView , TestPresenter> impl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        getActivityComponent().inject(this);
+//        getActivityComponent().inject(this);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_test_mvp);
@@ -48,6 +42,11 @@ public class TestMVPActivity extends BaseActivity<TestView , TestPresenter> impl
     @Override
     public TestPresenter createPresenter() {
          return presenter;
+    }
+
+    @Override
+    public void injectIndependies() {
+        getActivityComponent().inject(this);
     }
 
     @Override

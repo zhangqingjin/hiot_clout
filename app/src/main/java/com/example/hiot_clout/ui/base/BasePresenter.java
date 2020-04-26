@@ -1,4 +1,4 @@
-package com.example.hiot_clout.base;
+package com.example.hiot_clout.ui.base;
 
 /**
  * MVP架构Presenter层基类

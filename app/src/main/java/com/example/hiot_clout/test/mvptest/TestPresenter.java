@@ -1,6 +1,6 @@
 package com.example.hiot_clout.test.mvptest;
 
-import com.example.hiot_clout.base.BasePresenter;
+import com.example.hiot_clout.ui.base.BasePresenter;
 import com.example.hiot_clout.test.mvptest.dagger2test.ThirdObj;
 import com.example.hiot_clout.test.mvptest.model.User;
 

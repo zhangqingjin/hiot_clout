@@ -1,12 +1,10 @@
-package com.example.hiot_clout.base;
+package com.example.hiot_clout.ui.base;
 
 import android.app.Application;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.TaskStackBuilder;
 
 import com.example.hiot_clout.App;
 import com.example.hiot_clout.injection.component.ActivityComponent;
@@ -17,7 +15,7 @@ import com.example.hiot_clout.injection.module.ActivityModule;
 /**
  * MVP架构Activity基类
  */
-public abstract class BaseActivity<V extends BaseView,P extends BasePresenter> extends AppCompatActivity implements BaseView {
+public abstract class BaseActivity<V extends BaseView,P extends BasePresenter<V>> extends AppCompatActivity implements BaseView {
 
     private P presenter;
     private ActivityComponent mActivityComponent;
@@ -25,11 +23,16 @@ public abstract class BaseActivity<V extends BaseView,P extends BasePresenter> e
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        injectIndependies();
         presenter = createPresenter();
-        presenter.setView(this);
+        if (presenter!=null) {
+            presenter.setView((V) this);
+        }
     }
 
     public abstract P createPresenter();
+
+    public abstract void injectIndependies();
 
     @Override
     protected void onDestroy() {
