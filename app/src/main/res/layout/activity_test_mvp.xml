@@ -27,6 +27,11 @@
         android:background="@drawable/login_button_bg"
         android:text="登录"
         android:textColor="#ffffff"
-        android:textSize="20sp" /> />
+        android:textSize="20sp" />
+    <LinearLayout
+        android:id="@+id/container_fragment_test"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
 
 </LinearLayout>

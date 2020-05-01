@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.hiot_clout.R;
+import com.example.hiot_clout.test.fragmenttest.TestFragment;
 import com.example.hiot_clout.ui.base.BaseActivity;
 import com.example.hiot_clout.test.mvptest.model.User;
 
@@ -37,6 +38,7 @@ public class TestMVPActivity extends BaseActivity<TestView , TestPresenter> impl
                 presenter.login(user);
             }
         });
+
     }
 
     @Override
