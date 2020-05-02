@@ -17,5 +17,20 @@
         android:text="enqueue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_okhttp_login"
+        android:text="登录"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_okhttp_userinfo"
+        android:text="用户信息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_okhttp_updata_email"
+        android:text="修改邮箱"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
